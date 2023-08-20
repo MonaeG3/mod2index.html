@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2 class="external">     Area of Circle in JavaScript</h2>
+    <script src="area.js"></script>
+  </body>
+</html>
+
+JS file
+function circle(r, myPi)
+{
+    this.r = r;
+  // area method
+    this.myArea = function ()
+    {
+        return myPi * this.r * this.r;
+    };
+
+}
+
+let fName = prompt("Please enter your name");
+const myPi= 3.1415926;
+let myFavNum = prompt("Please enter your favorite number")
+var c = new circle(myFavNum, myPi);
+let message = "".concat("Hey " + fName + ", you entered " + myFavNum + " as your favorite number. If that was the radius of a circle, the area would be " + c.myArea());
+alert(message);
